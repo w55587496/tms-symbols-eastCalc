@@ -1,8 +1,8 @@
 # tms-symbols-eastCalc
 
-This is for TMS v263 Dreamer.
-Easy Cal total of the symbols and Meso you need.
-https://w55587496.github.io/tms-symbols-eastCalc/
+This is for TMS v263 Dreamer. <br>
+Easy Cal total of the symbols and Meso you need.   <br>
+https://w55587496.github.io/tms-symbols-eastCalc/   <br>
 
 Input (each td):
 
