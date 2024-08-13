@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>簡易計算符文價格與所需</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 導覽列 -->
+    <div class="navbar">
+        <div class="ref">
+            <a href="https://strategywiki.org/wiki/MapleStory/Arcane_River#Arcane_Symbols" target="_blank">來源</a>
+        </div>
+        <div class="name">@2024 yunlostinemotion </div>
+        <button type="button" id="submit" onclick="Update()">計算</button>
+    </div>
+    <div class="table-container">
+        <!-- 第一個表格 -->
+        <table class="arc-table">
+            <tr>
+                <th class="arc-th" colspan="3">ARACNE</th>
+            </tr>
+            <tr>
+                <td>
+                    <img src="./icons/arc/symbol-vanish.png" alt="消逝的旅途">
+                    <div class="image-name">消逝的旅途</div>
+                    Lv.<input type="number" class="arcLevel" id="arc-vanish-level" min="0" max="20" value="1" placeholder="目前等級" required > :
+                    <input type="number"  id="arc-vanish-current" value="0" placeholder="成長值"> 
+                </td>
+                <td>
+                    <img src="./icons/arc/symbol-chuchu.png" alt="啾啾愛爾蘭">
+                    <div class="image-name">啾啾愛爾蘭</div>
+                    Lv.<input type="number" class="arcLevel" id="arc-chuchu-level" min="0" max="20" value="1" placeholder="目前等級" required > :
+                    <input type="number" id="arc-chuchu-current" value="0" placeholder="成長值"> 
+                </td>
+                <td>
+                    <img src="./icons/arc/symbol-lacheln.png" alt="拉契爾恩">
+                    <div class="image-name">拉契爾恩</div>
+                    Lv.<input type="number" class="arcLevel" id="arc-lacheln-level" min="0" max="20" value="1" placeholder="目前等級" required > :
+                    <input type="number" id="arc-lacheln-current" value="0" placeholder="成長值"> 
+                </td>
+            <tr>
+                <td>
+                    <img src="./icons/arc/symbol-arcana.png" alt="阿爾卡娜">
+                    <div class="image-name">阿爾卡娜</div>
+                    Lv.<input type="number" class="arcLevel" id="arc-arcana-level" min="0" max="20" value="1" placeholder="目前等級" required > :
+                    <input type="number" id="arc-arcana-current" value="0" placeholder="成長值"> 
+                </td>
+                <td>
+                    <img src="./icons/arc/symbol-moras.png" alt="魔菈斯">
+                    <div class="image-name">魔菈斯</div>
+                    Lv.<input type="number" class="arcLevel" id="arc-moras-level" min="0" max="20" value="1" placeholder="目前等級" required > :
+                    <input type="number" id="arc-moras-current" value="0" placeholder="成長值"> 
+                </td>
+                <td>
+                    <img src="./icons/arc/symbol-esfera.png" alt="艾斯佩拉">
+                    <div class="image-name">艾斯佩拉</div>
+                    Lv.<input type="number" class="arcLevel" id="arc-esfera-level" min="0" max="20" value="1" placeholder="目前等級" required > :
+                    <input type="number" id="arc-esfera-current" value="0" placeholder="成長值"> 
+                </td>
+            </tr>
+        </table>
+
+        <!-- 第二個表格 -->
+        <table class="aut-table">
+            <tr>
+                <th class="aut-th" colspan="3">AUTHENTIC</th>
+            </tr>
+            <tr>
+                <td>
+                    <img src="./icons/aut/symbol-cernium.png" alt="賽爾尼溫">
+                    <div class="image-name">賽爾尼溫</div>
+                    Lv.<input type="number"class="autLevel" id="aut-cernium-level" min="0" max="11" value="1" placeholder="目前等級" required > :
+                    <input type="number" id="aut-cernium-current" min="0" max="4565" value="0" placeholder="成長值"> <br>
+                </td>
+                <td>
+                    <img src="./icons/aut/symbol-hotel.png" alt="阿爾克斯">
+                    <div class="image-name">阿爾克斯</div>
+                    Lv.<input type="number" class="autLevel" id="aut-hotel-level" min="0" max="11" value="1" placeholder="目前等級" required > :
+                    <input type="number" id="aut-hotel-current" min="0" max="4565" value="0" placeholder="成長值">
+                </td>
+                <td>
+                    <img src="./icons/aut/symbol-odium.png" alt="奧迪溫">
+                    <div class="image-name">奧迪溫</div>
+                    Lv.<input type="number" class="autLevel" id="aut-odium-level" min="0" max="11" value="1" placeholder="目前等級" required > :
+                    <input type="number" id="aut-odium-current" min="0" max="4565" value="0" placeholder="成長值">
+                </td>
+            <tr>
+                <td>
+                    <img src="./icons/aut/symbol-shangrila.png" alt="桃園境">
+                    <div class="image-name">桃源境</div>
+                    Lv.<input type="number" class="autLevel" id="aut-shangrila-level" min="0" max="11" value="1" placeholder="目前等級" required > :
+                    <input type="number" id="aut-shangrila-current" min="0" max="4565" value="0" placeholder="成長值">
+                </td>
+                <td>
+                    <img src="./icons/aut/symbol-arteria.png" alt="阿爾特利亞">
+                    <div class="image-name">阿爾特利亞</div>
+                    Lv.<input type="number" class="autLevel" id="aut-arteria-level" min="0" max="11" value="1" placeholder="目前等級" required> :
+                    <input type="number" id="aut-arteria-current" min="0" max="4565" value="0" placeholder="成長值">
+                </td>
+                <td>
+                    <img src="./icons/aut/symbol-carcion.png" alt="卡爾西溫">
+                    <div class="image-name">卡爾西溫</div>
+                    Lv.<input type="number" class="autLevel" id="aut-carcion-level" min="0" max="11" value="1" placeholder="目前等級" required> :
+                    <input type="number" id="aut-carcion-current"  min="0" max="4565" value="0" placeholder="成長值"> 
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="floatingWindow">
+        <table id="resultTable">
+            <button type="button" id="closeButton">&times;</button>
+            <thead>
+                <tr>
+                    <th>地圖</th>
+                    <th>可升至Lv.</th>
+                    <th>剩餘EXP</th>
+                    <th>楓幣花費</th>
+                    <th>距離滿等所需EXP</th>
+                </tr>
+            </thead>
+            <tbody id="resultBody">
+                <!-- 這裡的內容會由 JavaScript 動態生成 -->
+            </tbody>
+        </table>
+        <div>
+            <p id="total">現有的ARC+AUT升到滿要</p>
+
+        </div>
+    </div>
+    <script src="./scripts/symbolsTables.js"></script>
+    <script src="./scripts/symbolsCalc.js"></script>
+    <script src="./scripts/main.js"></script>
+</body>
+</html>

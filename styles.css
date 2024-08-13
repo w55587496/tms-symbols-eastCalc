@@ -1,0 +1,210 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    background-color: #333; 
+    color: #fff; 
+    padding: 10px; 
+    z-index: 100; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+/* 按鈕樣式 */
+.navbar button {
+    border: none;
+    color:black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: background 0.3s ease, transform 0.3s ease; 
+}
+
+.ref a {
+    color: white; 
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s ease; 
+}
+
+.ref a:hover {
+    color: #edf6ff; /* 當鼠標懸停時改變顏色 */
+}
+
+
+.navbar button:hover {
+    background: linear-gradient(45deg, #258eb8, #00b1e7); 
+    transform: scale(1.05); 
+}
+
+/* 名字顯示區域樣式 */
+.navbar .name {
+    font-size: 18px;
+    margin:20px 10px;
+}
+
+.table-container {
+    margin-top: 10%;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.arc-table, .aut-table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.arc-table .arc-th {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    background-color: #222266;
+    color: #333;
+    border-bottom: 2px solid #ccc;
+}
+
+.aut-table .aut-th {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    background-color: #e0e0e0;
+    color: #333;
+    border-bottom: 2px solid #ccc;
+}
+
+.arc-th {
+    font-size: 30px !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    padding: 15px !important;
+    background-color: #222266 !important;
+    color: white !important;
+    border-bottom: 2px solid #ccc !important;
+}
+
+.aut-th {
+    font-size: 30px !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    padding: 15px !important;
+    background-color: #5599dd !important;
+    color: white !important;
+    border-bottom: 2px solid #ccc !important;
+}
+
+.arc-table th, .aut-table th {
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #f2f2f2;
+}
+
+.arc-table td, .aut-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.arc-table img, .aut-table img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100px;
+    height: auto;
+}
+
+.arc-table input[type="number"],  .aut-table input[type="number"] {
+    width: 80px;                
+    height: 40px;               
+    padding: 5px;             
+    border: 1px solid #ccc;    
+    border-radius: 5px;        
+    font-size: 16px;           
+    text-align: center;        
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.arc-table input[type="number"]:focus,  .aut-table input[type="number"]:focus {
+    border-color: #007bff;    
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); 
+}
+
+.arc-table input[type="number"]:invalid{
+    background-color: #ffdddd;
+}
+
+.aut-table input[type="number"]:invalid{
+    background-color: #ffdddd;
+}
+
+.image-name {
+    margin-top: 10px;  
+    margin-bottom: 10px;      
+    font-size: 20px;     
+    color: #333;         
+}
+
+#floatingWindow {
+    display: none; /* 初始化時隱藏 */
+    position: fixed;
+    top: 10%; /* 讓懸浮窗距離屏幕頂部稍微有點距離 */
+    left: 50%;
+    transform: translateX(-50%); /* 垂直居中 */
+    z-index: 1001;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 100%; 
+    max-height: 80%; 
+    /* width: auto; 
+    height: auto;  */
+    overflow: auto; /* 允許內容超出時顯示滾動條 */
+    box-sizing: border-box; /* 確保內邊距和邊框不會影響到總寬度和高度 */
+}
+
+#resultTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#resultTable th, #resultTable td, #total {
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#resultTable th {
+    background-color: #f2f2f2;
+}
+
+#closeButton {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 8px;
+    background-color: red; 
+    color: #fff; 
+    padding-left: 10px; 
+    padding-right: 10px; 
+    z-index: 1002; 
+    align-items: center; 
+}
