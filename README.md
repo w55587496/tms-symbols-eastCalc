@@ -6,7 +6,7 @@ https://w55587496.github.io/tms-symbols-eastCalc/   <br>
 
 Input (each td):
   1. left: your current ARC/AUT LEVEL.
-  2.right: your current ARC/AUT EXP.
+  2. right: your current ARC/AUT EXP.
 
 Get: each ARC/AUT details.
   1. The max level that can be enhanced.
