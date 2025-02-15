@@ -1,4 +1,4 @@
-# tms-symbols-eastCalc
+# tms-symbols-easyCalc
 
 This is for TMS v263 Dreamer. <br>
 Easy Cal total of the symbols and Meso you need.   <br>
